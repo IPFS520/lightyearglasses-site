@@ -1,0 +1,228 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "slug": "oat-milk-foundation",
+      "title": "Oat Milk Foundation",
+      "description": "An ultra-hydrating, skin-loving foundation infused with oat milk and antioxidants. Delivers a dewy, natural finish that lasts all day while caring for your skin barrier.",
+      "images": [
+        "https://images.unsplash.com/photo-1631730359585-38a4935cbec4?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.8,
+      "reviews": 365,
+      "sellingPoints": [
+        "All-day dewy skin",
+        "Breathable, buildable coverage",
+        "Antioxidant-rich formula",
+        "Sensitive skin safe",
+        "16 flexi-shades"
+      ],
+      "category": "makeup",
+      "subcategory": "face",
+      "price": 65,
+      "shade": "Nougat | Fairest Neutral",
+      "featured": true,
+      "status": "published",
+      "ingredients": "Oat Milk Extract, Hyaluronic Acid, Vitamin E, Squalane, Zinc Oxide",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "2",
+      "slug": "moringa-all-beauty-creme",
+      "title": "Moringa All-Beauty Crème",
+      "description": "A luxurious multi-purpose moisturizer powered by moringa, formulated to hydrate, prime and nourish. Gentle enough for the most sensitive skin types.",
+      "images": [
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.8,
+      "reviews": 122,
+      "sellingPoints": [
+        "Moisturises deeply",
+        "Perfect primer & hydrator",
+        "Gentle, soothing formula",
+        "Helps retain skin elasticity",
+        "100% natural ingredients"
+      ],
+      "category": "skincare",
+      "subcategory": "moisturiser",
+      "price": 60,
+      "featured": true,
+      "status": "published",
+      "ingredients": "Moringa Oleifera Seed Oil, Shea Butter, Jojoba Oil, Vitamin C",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "3",
+      "slug": "coco-crayon",
+      "title": "Coco Crayon",
+      "description": "A multi-purpose colour stick that works as both lipstick and blush. Infused with coconut oil for a creamy, hydrating finish.",
+      "images": [
+        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1631214524020-7c5c9e9c7b5a?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.8,
+      "reviews": 106,
+      "sellingPoints": [
+        "Colour & condition skin",
+        "For lips & cheeks",
+        "Allure Award winner",
+        "Semi-matte finish",
+        "100% plastic free"
+      ],
+      "category": "makeup",
+      "subcategory": "lips",
+      "price": 42,
+      "shade": "Aura | Pink Beige",
+      "featured": true,
+      "status": "published",
+      "ingredients": "Coconut Oil, Shea Butter, Vitamin E, Natural Waxes",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "4",
+      "slug": "aloe-gel-mascara",
+      "title": "Aloe Gel Lash & Brow Mascara",
+      "description": "A 2-in-1 clear mascara that conditions and grooms lashes and brows. Infused with aloe vera gel for a vitamin-rich, natural look.",
+      "images": [
+        "https://images.unsplash.com/photo-1631730486572-226d1f595b68?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1599546184679-591c4a1b0eb7?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.2,
+      "reviews": 91,
+      "sellingPoints": [
+        "2-in-1 clear mascara",
+        "Conditions & grooms",
+        "Vitamin-rich formula",
+        "Sensitive skin safe",
+        "Natural & vegan"
+      ],
+      "category": "makeup",
+      "subcategory": "brows",
+      "price": 44,
+      "shade": "Clear",
+      "featured": true,
+      "status": "published",
+      "ingredients": "Aloe Vera Gel, Vitamin B5, Pro-vitamin B5, Natural Gum",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "5",
+      "slug": "black-tea-face-toner",
+      "title": "Black Tea Face Toner",
+      "description": "A soothing black tea toner that refreshes, balances pH and prepares skin for hydration. Rich in antioxidants to protect against environmental stress.",
+      "images": [
+        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1617897903246-719242758050?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.6,
+      "reviews": 88,
+      "sellingPoints": [
+        "Refreshes & balances skin pH",
+        "Antioxidant-rich formula",
+        "Prepares skin for serums",
+        "Alcohol-free",
+        "Vegan & cruelty-free"
+      ],
+      "category": "skincare",
+      "subcategory": "cleanser",
+      "price": 48,
+      "featured": false,
+      "status": "published",
+      "ingredients": "Black Tea Extract, Hyaluronic Acid, Green Tea, Chamomile",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "6",
+      "slug": "ginkgo-micellar-cleanser",
+      "title": "Ginkgo Micellar Cleanser",
+      "description": "A gentle micellar water infused with ginkgo biloba that removes makeup and impurities without stripping the skin barrier.",
+      "images": [
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1629161883858-d9413b47a0d4?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.5,
+      "reviews": 76,
+      "sellingPoints": [
+        "Removes makeup & impurities",
+        "Gentle on skin barrier",
+        "No rinsing required",
+        "Suitable for sensitive skin",
+        "Dermatologist tested"
+      ],
+      "category": "skincare",
+      "subcategory": "cleanser",
+      "price": 42,
+      "featured": false,
+      "status": "published",
+      "ingredients": "Ginkgo Biloba Extract, Micellar Solution, Vitamin E, Panthenol",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "7",
+      "slug": "chamomile-eye-palette",
+      "title": "Chamomile Eye Palette",
+      "description": "A timeless eyeshadow palette featuring everyday wearable shades. Infused with chamomile extract to soothe the delicate eye area.",
+      "images": [
+        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1522335789203-aaa06a85f06e?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.7,
+      "reviews": 95,
+      "sellingPoints": [
+        "8 timeless shades",
+        "Smooth & blendable texture",
+        "Chamomile-infused formula",
+        "Buildable coverage",
+        "Cruelty-free & vegan"
+      ],
+      "category": "makeup",
+      "subcategory": "eyes",
+      "price": 58,
+      "featured": true,
+      "status": "published",
+      "ingredients": "Chamomile Extract, Mica, Zinc Stearate, Silica, Vitamin E",
+      "createdAt": "2026-10-24"
+    },
+    {
+      "id": "8",
+      "slug": "grape-water-eye-serum",
+      "title": "Grape Water Eye Serum",
+      "description": "A lightweight eye serum infused with grape water to hydrate, refresh and smooth the delicate eye area. Reduces puffiness and fine lines.",
+      "images": [
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1617897903246-719242758050?w=800&h=1000&fit=crop",
+        "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&h=1000&fit=crop"
+      ],
+      "rating": 4.6,
+      "reviews": 68,
+      "sellingPoints": [
+        "Hydrates & refreshes eye area",
+        "Reduces puffiness & dark circles",
+        "Lightweight, fast-absorbing",
+        "Cooling grape water formula",
+        "Suitable for all skin types"
+      ],
+      "category": "skincare",
+      "subcategory": "eye-care",
+      "price": 52,
+      "featured": false,
+      "status": "published",
+      "ingredients": "Grape Water, Hyaluronic Acid, Caffeine, Aloe Vera, Green Tea",
+      "createdAt": "2026-10-24"
+    }
+  ],
+  "categories": [
+    { "slug": "makeup", "title": "Makeup" },
+    { "slug": "skincare", "title": "Skincare" },
+    { "slug": "gifts", "title": "Gifts & Sets" }
+  ]
+}
