@@ -228,9 +228,6 @@ export default function Header() {
                 <Link href="/pages/contact" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>
                   Contact
                 </Link>
-                <Link href="/admin" className="block py-2 text-sm text-muted" onClick={() => setMobileOpen(false)}>
-                  Admin
-                </Link>
               </div>
             </nav>
           </div>
