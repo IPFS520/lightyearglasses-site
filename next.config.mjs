@@ -1,20 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "**" },
-    ],
-    formats: ["image/webp"],
     unoptimized: true,
   },
+  trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
-  // 跳过静态生成远程图片 fetch
-  experimental: {
-    workerThreads: false,
-    cpus: 1,
-  },
 };
-
 export default nextConfig;
