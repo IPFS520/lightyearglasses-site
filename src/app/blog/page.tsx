@@ -4,19 +4,6 @@ import { getBlog } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
-interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  coverImage: string;
-  content: string;
-  author: string;
-  category: string;
-  tags: string[];
-  publishedAt: string;
-}
-
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
   return date.toLocaleDateString("en-US", {
@@ -27,7 +14,7 @@ function formatDate(dateStr: string): string {
 }
 
 export default function BlogIndexPage() {
-  const posts = getBlog().posts as BlogPost[];
+  const posts = getBlog().posts;
 
   const sortedPosts = [...posts].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()

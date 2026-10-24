@@ -2,22 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getBlog } from "@/lib/db";
+import { getBlog, type BlogPost } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
-
-interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  coverImage: string;
-  content: string;
-  author: string;
-  category: string;
-  tags: string[];
-  publishedAt: string;
-}
 
 interface PageProps {
   params: { slug: string };
