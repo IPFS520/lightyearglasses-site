@@ -246,7 +246,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-            {testimonials.items.map((t, i) => (
+            {(testimonials.items as any[]).map((t: any, i) => (
               <div
                 key={i}
                 className="border border-primary/10 p-8 flex flex-col gap-3 bg-cream/40"
