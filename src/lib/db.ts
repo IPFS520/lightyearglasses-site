@@ -115,10 +115,10 @@ export interface BlogPost {
   excerpt: string;
   coverImage: string;
   content: string;
-  author?: string;
-  category?: string;
-  tags?: string[];
-  publishedAt?: string;
+  author: string;
+  category: string;
+  tags: string[];
+  publishedAt: string;
 }
 
 export function getBlog() {
