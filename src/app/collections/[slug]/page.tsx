@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Link from "next/link";
 import productsData from "@/data/products.json";
@@ -40,6 +41,16 @@ function filterProducts(slug: string, raw: ProductCardProduct[]): ProductCardPro
   }
 }
 
+export function generateStaticParams() {
+  return [
+    { slug: "all" },
+    { slug: "makeup" },
+    { slug: "skincare" },
+    { slug: "gifts" },
+    { slug: "best-sellers" },
+  ];
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const slug = params.slug;
   const title = SLUG_TO_TITLE[slug] || "Collections";
@@ -52,7 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default function CollectionPage({ params }: PageProps) {
   const slug = params.slug;
-  const all = (productsData as any).products as ProductCardProduct[];
+  const all = (productsData as { products: ProductCardProduct[] }).products;
   const filtered = filterProducts(slug, all);
   const title = SLUG_TO_TITLE[slug] || "All Products";
 

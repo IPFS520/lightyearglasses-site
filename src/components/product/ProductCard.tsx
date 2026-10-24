@@ -8,6 +8,7 @@ export interface ProductCardProduct {
   id: string;
   slug: string;
   title: string;
+  description?: string;
   images: string[];
   rating: number;
   reviews: number;
@@ -16,6 +17,7 @@ export interface ProductCardProduct {
   shade?: string;
   featured?: boolean;
   category?: string;
+  subcategory?: string;
   status?: string;
   ingredients?: string;
 }
