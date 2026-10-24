@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useAdminFetch } from "../lib";
+import { useAdminFetch } from "../../lib";
 
 export default function BlogListPage() {
   const api = useAdminFetch();

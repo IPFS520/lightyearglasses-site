@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
-import { useAdminFetch } from "../lib";
+import { useAdminFetch } from "../../lib";
 
 const PAGES: { key: string; label: string; path?: string }[] = [
   { key: "home", label: "🏠 首页内容", path: "/" },

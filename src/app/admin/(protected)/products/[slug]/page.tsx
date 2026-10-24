@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useAdminFetch, uploadFiles, slugify, nowISO } from "../../lib";
+import { useAdminFetch, uploadFiles, slugify, nowISO } from "../../../lib";
 
 const empty = {
   slug: "", title: "", description: "", images: [] as string[],
