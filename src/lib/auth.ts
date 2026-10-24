@@ -14,12 +14,22 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
+        console.log("[AUTH] authorize called:", {
+          email: credentials?.email,
+          hasPassword: !!credentials?.password,
+          envEmail: process.env.ADMIN_EMAIL,
+          hashLen: (process.env.ADMIN_PASSWORD_HASH || "").length,
+          hasBcrypt: typeof bcrypt !== "undefined",
+        });
         if (!credentials?.email || !credentials?.password) return null;
-        if (credentials.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) return null;
-        // 无 hash 时回退到明文（开发/首次部署）
+        if (credentials.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+          console.log("[AUTH] email mismatch:", credentials.email, "!=", ADMIN_EMAIL);
+          return null;
+        }
         const ok = ADMIN_HASH
           ? await bcrypt.compare(credentials.password, ADMIN_HASH)
           : credentials.password === process.env.ADMIN_PASSWORD;
+        console.log("[AUTH] bcrypt result:", ok, "ADMIN_HASH present:", !!ADMIN_HASH);
         if (!ok) return null;
         return { id: "1", name: "Admin", email: ADMIN_EMAIL };
       },
