@@ -1,8 +1,8 @@
-export const dynamic = "force-dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { Carousel } from "@/components/carousel/Carousel";
 import ProductCard from "@/components/product/ProductCard";
+import NewsletterForm from "@/components/newsletter/NewsletterForm";
 import productsData from "@/data/products.json";
 import pagesData from "@/data/pages.json";
 import blogData from "@/data/blog.json";
@@ -377,23 +377,7 @@ export default function Home() {
             <p className="mt-4 text-primary/70 font-sans">{newsletter.subtitle}</p>
           )}
 
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              required
-              placeholder="Enter your email"
-              className="flex-1 px-5 py-3 border border-primary/20 bg-white text-sm font-sans placeholder:text-muted focus:outline-none focus:border-primary transition-colors"
-            />
-            <button
-              type="submit"
-              className="btn btn-primary px-8 py-3 text-sm"
-            >
-              Join
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
     </>
