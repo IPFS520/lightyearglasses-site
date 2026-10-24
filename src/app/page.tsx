@@ -20,25 +20,23 @@ interface Testimonial {
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-const products = getProducts().products;
-const featured: Product[] = products.filter(
-  (p) => p.featured && p.status === "published"
-);
-
-const home = getPages().home || {};
-const hero = home.hero || {};
-const brandIntro = home.brandIntro || {};
-const asSeenIn = home.asSeenIn || {};
-const bestSellers = home.bestSellers || {};
-const featuredSection = home.featuredSection || {};
-const testimonials = (home.testimonials || { items: [] }) as {
-  title: string;
-  items: Testimonial[];
-};
-const quote = home.quote || {};
-const newsletter = home.newsletter || {};
-
-const blogPosts: BlogPost[] = (getBlog().posts || []).slice(0, 3);
+function getRuntimeData() {
+  const products = getProducts().products;
+  const featured: Product[] = products.filter(
+    (p) => p.featured && p.status === "published"
+  );
+  const home = getPages().home || {};
+  const hero = home.hero || {};
+  const brandIntro = home.brandIntro || {};
+  const asSeenIn = home.asSeenIn || {};
+  const bestSellers = home.bestSellers || {};
+  const featuredSection = home.featuredSection || {};
+  const testimonials = home.testimonials || { items: [] };
+  const quote = home.quote || {};
+  const newsletter = home.newsletter || {};
+  const blogPosts: BlogPost[] = (getBlog().posts || []).slice(0, 3);
+  return { products, featured, hero, brandIntro, asSeenIn, bestSellers, featuredSection, testimonials, quote, newsletter, blogPosts };
+}
 
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);
@@ -58,6 +56,7 @@ function renderStars(rating: number) {
 // Page — Server Component
 // ---------------------------------------------------------------------------
 export default function Home() {
+  const { products, featured, hero, brandIntro, asSeenIn, bestSellers, featuredSection, testimonials, quote, newsletter, blogPosts } = getRuntimeData();
   return (
     <>
       {/* ------------------------------------------------------------ */}

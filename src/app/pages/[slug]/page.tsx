@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getPages } from "@/lib/db";
 import FAQAccordion from "@/components/faq/FAQAccordion";
@@ -141,13 +141,16 @@ Welcome to Lightyear Glasses. By accessing or using our website, you agree to be
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-const pages = getPages() as {
+type PagesBag = {
   home: { asSeenIn?: AsSeenIn };
   about?: AboutPage;
   faq?: FAQPage;
   contact?: ContactPage;
   shippingReturns?: ShippingReturnsPage;
 };
+function loadPages(): PagesBag {
+  return getPages() as PagesBag;
+}
 
 const TITLE_MAP: Record<string, string> = {
   about: "Our Story",
@@ -363,7 +366,7 @@ function TermsRenderer() {
   );
 }
 
-function PressRenderer() {
+function PressRenderer() { const pages = loadPages();
   const logos = pages.home?.asSeenIn?.logos || [
     "VOGUE",
     "ALLURE",
@@ -488,6 +491,7 @@ function RetailersRenderer() {
 // ---------------------------------------------------------------------------
 export default function PagesPage({ params }: PageProps) {
   const slug = params.slug;
+  const pages = loadPages();
 
   switch (slug) {
     case "about": {
