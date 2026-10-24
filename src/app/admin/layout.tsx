@@ -1,13 +1,8 @@
 import "./admin.css";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import { SignOutLink } from "./SignOutLink";
 
-export default async function AdminLayout({ children }: { children: React.ReactNode }) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user) redirect("/admin/login");
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
 
   const nav = [
     { href: "/admin", label: "仪表盘" },
