@@ -57,17 +57,17 @@ export interface Product {
   title: string;
   description: string;
   images: string[];
-  rating?: number;
-  reviews?: number;
-  sellingPoints?: string[];
-  category?: string;
-  subcategory?: string;
-  price?: number;
-  shade?: string;
-  featured?: boolean;
-  status?: string;
-  ingredients?: string;
-  createdAt?: string;
+  rating: number;
+  reviews: number;
+  sellingPoints: string[];
+  category: string;
+  subcategory: string;
+  price: number;
+  shade: string;
+  featured: boolean;
+  status: string;
+  ingredients: string;
+  createdAt: string;
 }
 
 export function getProducts() {

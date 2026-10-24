@@ -3,42 +3,18 @@ import Link from "next/link";
 import { Carousel } from "@/components/carousel/Carousel";
 import ProductCard from "@/components/product/ProductCard";
 import NewsletterForm from "@/components/newsletter/NewsletterForm";
-import { getProducts, getBlog, getPages } from "@/lib/db";
+import { getProducts, getBlog, getPages, type Product, type BlogPost } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
-interface Product {
-  id: string;
-  slug: string;
-  title: string;
-  images: string[];
-  rating: number;
-  reviews: number;
-  sellingPoints?: string[];
-  category?: string;
-  price: number;
-  shade?: string;
-  featured?: boolean;
-  status?: string;
-  ingredients?: string;
-}
-
 interface Testimonial {
   name: string;
   rating: number;
   content: string;
   product: string;
-}
-
-interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  coverImage: string;
-  publishedAt: string;
 }
 
 // ---------------------------------------------------------------------------
