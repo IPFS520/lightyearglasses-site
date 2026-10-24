@@ -19,6 +19,8 @@ export const authOptions: NextAuthOptions = {
           hasPassword: !!credentials?.password,
           envEmail: process.env.ADMIN_EMAIL,
           hashLen: (process.env.ADMIN_PASSWORD_HASH || "").length,
+          hashPrefix: (process.env.ADMIN_PASSWORD_HASH || "").slice(0, 20),
+          ADMIN_HASH_prefix: ADMIN_HASH.slice(0, 20),
           hasBcrypt: typeof bcrypt !== "undefined",
         });
         if (!credentials?.email || !credentials?.password) return null;
