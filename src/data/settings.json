@@ -1,0 +1,80 @@
+{
+  "site": {
+    "name": "Lightyear Glasses",
+    "tagline": "Beauty Beyond Clean",
+    "description": "Sustainable makeup and skincare powered by superfood ingredients. Clean beauty that actually performs.",
+    "logo": "LG",
+    "favicon": null
+  },
+  "navigation": [
+    {
+      "label": "Makeup",
+      "href": "/collections/makeup",
+      "submenu": [
+        { "label": "Best Sellers", "href": "/collections/best-sellers" },
+        { "label": "Shop All Makeup", "href": "/collections/makeup" },
+        { "label": "Face", "href": "/collections/makeup" },
+        { "label": "Eyes", "href": "/collections/makeup" },
+        { "label": "Lips", "href": "/collections/makeup" }
+      ]
+    },
+    {
+      "label": "Skincare",
+      "href": "/collections/skincare",
+      "submenu": [
+        { "label": "Best Sellers", "href": "/collections/best-sellers" },
+        { "label": "Shop All Skincare", "href": "/collections/skincare" },
+        { "label": "Cleanse & Tone", "href": "/collections/skincare" },
+        { "label": "Moisturise", "href": "/collections/skincare" },
+        { "label": "Eye Care", "href": "/collections/skincare" }
+      ]
+    },
+    {
+      "label": "Gifts & Sets",
+      "href": "/collections/gifts",
+      "submenu": [
+        { "label": "Makeup Sets", "href": "/collections/gifts" },
+        { "label": "Skincare Sets", "href": "/collections/gifts" },
+        { "label": "Gift Cards", "href": "/collections/gifts" }
+      ]
+    },
+    {
+      "label": "Our Story",
+      "href": "/pages/about",
+      "submenu": [
+        { "label": "Our Story", "href": "/pages/about" },
+        { "label": "As Seen In", "href": "/pages/press" },
+        { "label": "Retailers", "href": "/pages/retailers" },
+        { "label": "Journal", "href": "/blog" }
+      ]
+    }
+  ],
+  "footer": {
+    "shop": [
+      { "label": "Makeup", "href": "/collections/makeup" },
+      { "label": "Skincare", "href": "/collections/skincare" },
+      { "label": "Gifts & Sets", "href": "/collections/gifts" },
+      { "label": "Best Sellers", "href": "/collections/best-sellers" },
+      { "label": "Shop All", "href": "/collections/all" }
+    ],
+    "support": [
+      { "label": "FAQ", "href": "/pages/faq" },
+      { "label": "Shipping & Returns", "href": "/pages/shipping-returns" },
+      { "label": "Contact Us", "href": "/pages/contact" },
+      { "label": "Retailers", "href": "/pages/retailers" },
+      { "label": "Terms & Conditions", "href": "/pages/terms" }
+    ],
+    "social": [
+      { "label": "Instagram", "href": "https://instagram.com" },
+      { "label": "TikTok", "href": "https://tiktok.com" },
+      { "label": "Pinterest", "href": "https://pinterest.com" },
+      { "label": "YouTube", "href": "https://youtube.com" }
+    ]
+  },
+  "socialLinks": {
+    "instagram": "https://instagram.com",
+    "tiktok": "https://tiktok.com",
+    "pinterest": "https://pinterest.com",
+    "youtube": "https://youtube.com"
+  }
+}

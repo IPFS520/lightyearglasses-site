@@ -1,0 +1,122 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "New!",
+      "title": "Your Forever Eye Wardrobe",
+      "subtitle": "Timeless eyeshadow shades for everyday wear",
+      "ctaText": "Shop Eye Palettes",
+      "ctaHref": "/products/chamomile-eye-palette",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=1920&h=1080&fit=crop"
+    },
+    "brandIntro": {
+      "title": "Beauty Beyond Clean",
+      "paragraphs": [
+        "For 24 years, Lightyear Glasses has gone beyond clean beauty with sustainable makeup and skincare powered by superfood ingredients. Delivering high-performance results with formulas gentle enough for sensitive skin.",
+        "We believe beauty should be good for you and good for the planet. That's why every product is crafted with natural, ethically-sourced ingredients and packaged thoughtfully to minimize environmental impact."
+      ],
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&h=800&fit=crop"
+    },
+    "asSeenIn": {
+      "title": "As Seen In",
+      "logos": [
+        "VOGUE", "ALLURE", "ELLE", "HARPER'S BAZAAR",
+        "Glamour", "InStyle", "Marie Claire", "Cosmopolitan",
+        "W Magazine", "The Cut", "Refinery29", "Byrdie"
+      ]
+    },
+    "bestSellers": {
+      "title": "Best Sellers",
+      "subtitle": "Discover our most-loved natural beauty essentials"
+    },
+    "featuredSection": {
+      "title": "Your Forever Eye Wardrobe",
+      "subtitle": "Introducing our new chamomile-infused eyeshadow palette",
+      "ctaText": "Discover the Collection",
+      "ctaHref": "/collections/makeup",
+      "image": "https://images.unsplash.com/photo-1522335789203-aaa06a85f06e?w=1920&h=1080&fit=crop"
+    },
+    "testimonials": {
+      "title": "Loved by Many",
+      "items": [
+        {
+          "name": "Sarah M.",
+          "rating": 5,
+          "content": "The oat milk foundation is the best foundation I've ever used. It looks like skin, not makeup. I wear it every day!",
+          "product": "Oat Milk Foundation"
+        },
+        {
+          "name": "Emily R.",
+          "rating": 5,
+          "content": "Finally a clean beauty brand that actually works. The coco crayon is my go-to for lips and cheeks.",
+          "product": "Coco Crayon"
+        },
+        {
+          "name": "Jessica L.",
+          "rating": 5,
+          "content": "My sensitive skin loves the moringa crème. It's so moisturizing and doesn't cause any breakouts.",
+          "product": "Moringa All-Beauty Crème"
+        },
+        {
+          "name": "Amanda K.",
+          "rating": 5,
+          "content": "Beautiful packaging, beautiful formula. The chamomile palette shades are perfect for every occasion.",
+          "product": "Chamomile Eye Palette"
+        }
+      ]
+    },
+    "quote": {
+      "text": "Beauty should never come at the cost of your health or the planet's.",
+      "author": "Our Founder"
+    },
+    "newsletter": {
+      "title": "Join the Lightyear Community",
+      "subtitle": "Get 10% off your first order, early access to new launches and beauty tips delivered to your inbox."
+    }
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Clean beauty with a conscience",
+    "sections": [
+      {
+        "heading": "Founder & Philosophy",
+        "content": "Lightyear Glasses was founded on a simple belief: beauty products should be good for you and good for the planet. After years working in the beauty industry and seeing the gap between 'clean' and 'effective', our founder set out to create a brand that delivers both.\n\nEvery formula is crafted with superfood ingredients, tested on real people (never animals), and packaged with sustainability in mind. We don't just make beauty products — we make beauty you can feel good about."
+      },
+      {
+        "heading": "The Clean Beauty Benchmark",
+        "content": "We go beyond 'clean' to set a new standard. Our formulas are free from over 1,500 harmful ingredients, and we continually update our ingredient list as new research emerges. Every product is dermatologist-tested, vegan, and cruelty-free."
+      },
+      {
+        "heading": "Sustainable Beauty",
+        "content": "Sustainability isn't an afterthought — it's baked into everything we do. From our 100% plastic-free packaging to our carbon-neutral shipping, we're committed to reducing our environmental footprint. We also plant a tree for every order placed."
+      },
+      {
+        "heading": "Giving Back",
+        "content": "We believe in beauty with purpose. A portion of every sale goes to organizations supporting women's health, environmental conservation, and clean water initiatives around the world."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "question": "Are your products cruelty-free?", "answer": "Yes! All our products are 100% cruelty-free and never tested on animals. We are certified by Leaping Bunny." },
+      { "question": "Are your products vegan?", "answer": "Most of our products are vegan. Please check individual product pages for specific ingredient information." },
+      { "question": "What is your return policy?", "answer": "We offer a 30-day money-back guarantee. If you're not completely satisfied, return the product for a full refund." },
+      { "question": "How long does shipping take?", "answer": "Standard shipping takes 3-7 business days within the US, 7-14 business days internationally. Express options available at checkout." },
+      { "question": "Are your products safe for sensitive skin?", "answer": "Absolutely. All our formulas are hypoallergenic and dermatologist-tested, making them suitable for even the most sensitive skin types." },
+      { "question": "Do you ship internationally?", "answer": "Yes, we ship to most countries worldwide. Shipping rates and delivery times vary by destination." },
+      { "question": "What makes your products 'clean'?", "answer": "We have a strict list of over 1,500 ingredients we will never use, including parabens, sulfates, phthalates, mineral oil, and synthetic fragrances." }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "email": "hello@lightyearglasses.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Beauty Lane, New York, NY 10001",
+    "hours": "Monday - Friday: 9am - 6pm EST"
+  },
+  "shippingReturns": {
+    "title": "Shipping & Returns",
+    "content": "At Lightyear Glasses, we want you to love every product. If you're not completely satisfied, we offer a hassle-free return policy.\n\n**Shipping**\n- Standard Shipping: $8 (3-7 business days)\n- Express Shipping: $20 (2-3 business days)\n- Free Shipping on orders over $75\n\n**International Shipping**\n- Rates calculated at checkout\n- Delivery: 7-14 business days\n\n**Returns**\n- 30-day return policy\n- Items must be unused and in original packaging\n- Free return shipping for defective items\n- Non-defective returns: $12 return shipping fee"
+  }
+}

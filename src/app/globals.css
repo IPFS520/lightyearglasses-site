@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #212326;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-roboto), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-frank-ruhl-libre), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+
+  p { @apply text-base md:text-lg text-primary/80; }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm font-medium uppercase tracking-wider border transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border-primary hover:bg-primary/90 hover:translate-y-[-1px];
+  }
+
+  .btn-outline {
+    @apply border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply border-transparent text-primary underline underline-offset-4 hover:text-accent;
+  }
+
+  .container-site {
+    @apply max-w-site mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-title {
+    @apply text-center mb-4 uppercase text-xs tracking-wider-2 text-muted font-sans;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
