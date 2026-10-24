@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import blogData from "@/data/blog.json";
+import { getBlog } from "@/lib/db";
+
+export const dynamic = "force-dynamic";
 
 interface BlogPost {
   id: string;
@@ -22,8 +24,7 @@ interface PageProps {
 }
 
 function getPostBySlug(slug: string): BlogPost | undefined {
-  const posts = (blogData as any).posts as BlogPost[];
-  return posts.find((p) => p.slug === slug);
+  return getBlog().posts.find((p) => p.slug === slug);
 }
 
 function formatDate(dateStr: string): string {
@@ -52,9 +53,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export function generateStaticParams() {
-  const posts = (blogData as any).posts as BlogPost[];
-  return posts.map((p) => ({ slug: p.slug }));
+export function generateStaticParams(): { slug: string }[] {
+  return [];
 }
 
 export default function BlogPostPage({ params }: PageProps) {
@@ -64,7 +64,7 @@ export default function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  const all = (blogData as any).posts as BlogPost[];
+  const all = getBlog().posts;
   const related = all
     .filter((p) => p.slug !== post.slug)
     .slice(0, 3);

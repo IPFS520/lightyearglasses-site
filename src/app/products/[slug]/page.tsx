@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import productsData from "@/data/products.json";
+import { getProducts } from "@/lib/db";
 import ProductDetail from "@/components/product/ProductDetail";
 import ProductCard, { ProductCardProduct } from "@/components/product/ProductCard";
+
+export const dynamic = "force-dynamic";
 
 interface PageProps {
   params: { slug: string };
 }
 
 function getProductBySlug(slug: string): ProductCardProduct | undefined {
-  const products = (productsData as any).products as ProductCardProduct[];
-  return products.find((p) => p.slug === slug && p.status === "published");
+  return getProducts().products.find((p) => p.slug === slug && p.status === "published");
 }
 
-export function generateStaticParams() {
-  const products = (productsData as any).products as ProductCardProduct[];
-  return products
-    .filter((p) => p.status === "published")
-    .map((p) => ({ slug: p.slug }));
+export function generateStaticParams(): { slug: string }[] {
+  return [];
+}
+
+function getAll(): ProductCardProduct[] {
+  return getProducts().products;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -45,7 +47,7 @@ export default function ProductPage({ params }: PageProps) {
     notFound();
   }
 
-  const all = (productsData as any).products as ProductCardProduct[];
+  const all = getAll();
   const related = all
     .filter(
       (p) =>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import blogData from "@/data/blog.json";
+import { getBlog } from "@/lib/db";
+
+export const dynamic = "force-dynamic";
 
 interface BlogPost {
   id: string;
@@ -25,7 +27,7 @@ function formatDate(dateStr: string): string {
 }
 
 export default function BlogIndexPage() {
-  const posts = (blogData as any).posts as BlogPost[];
+  const posts = getBlog().posts as BlogPost[];
 
   const sortedPosts = [...posts].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()

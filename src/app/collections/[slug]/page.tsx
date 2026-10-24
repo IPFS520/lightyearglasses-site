@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import productsData from "@/data/products.json";
+import { getProducts } from "@/lib/db";
 import ProductCard, { ProductCardProduct } from "@/components/product/ProductCard";
+
+export const dynamic = "force-dynamic";
 
 interface PageProps {
   params: { slug: string };
@@ -62,7 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default function CollectionPage({ params }: PageProps) {
   const slug = params.slug;
-  const all = (productsData as { products: ProductCardProduct[] }).products;
+  const all = getProducts().products as ProductCardProduct[];
   const filtered = filterProducts(slug, all);
   const title = SLUG_TO_TITLE[slug] || "All Products";
 

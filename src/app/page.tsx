@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Carousel } from "@/components/carousel/Carousel";
 import ProductCard from "@/components/product/ProductCard";
 import NewsletterForm from "@/components/newsletter/NewsletterForm";
-import productsData from "@/data/products.json";
-import pagesData from "@/data/pages.json";
-import blogData from "@/data/blog.json";
+import { getProducts, getBlog, getPages } from "@/lib/db";
+
+export const dynamic = "force-dynamic";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -44,12 +44,12 @@ interface BlogPost {
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-const products = (productsData as { products: Product[] }).products;
+const products = getProducts().products;
 const featured: Product[] = products.filter(
   (p) => p.featured && p.status === "published"
 );
 
-const home = (pagesData as { home: Record<string, any> }).home;
+const home = getPages().home || {};
 const hero = home.hero || {};
 const brandIntro = home.brandIntro || {};
 const asSeenIn = home.asSeenIn || {};
@@ -62,7 +62,7 @@ const testimonials = (home.testimonials || { items: [] }) as {
 const quote = home.quote || {};
 const newsletter = home.newsletter || {};
 
-const blogPosts: BlogPost[] = ((blogData as { posts: BlogPost[] }).posts || []).slice(0, 3);
+const blogPosts: BlogPost[] = (getBlog().posts || []).slice(0, 3);
 
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);

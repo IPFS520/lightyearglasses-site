@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import pagesData from "@/data/pages.json";
+import { getPages } from "@/lib/db";
 import FAQAccordion from "@/components/faq/FAQAccordion";
 import ContactForm from "@/components/contact/ContactForm";
+
+export const dynamic = "force-dynamic";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -139,7 +141,7 @@ Welcome to Lightyear Glasses. By accessing or using our website, you agree to be
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-const pages = pagesData as {
+const pages = getPages() as {
   home: { asSeenIn?: AsSeenIn };
   about?: AboutPage;
   faq?: FAQPage;
