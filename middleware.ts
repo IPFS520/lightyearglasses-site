@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// 要保护的路径（不含登录页和 auth API）
-const PROTECTED_PREFIXES = ["/admin", "/api/admin"];
 const EXCLUDED = ["/admin/login", "/admin/login/", "/api/auth", "/api/data"];
 
-export function middleware(req: NextRequest) {
+export default function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
 
   // 排除的直接放行
@@ -14,15 +12,14 @@ export function middleware(req: NextRequest) {
   }
 
   // 不保护的路径放行
-  const needsProtect = PROTECTED_PREFIXES.some(
-    p => pathname === p || pathname.startsWith(p + "/")
-  );
+  const needsProtect =
+    pathname === "/admin" || pathname.startsWith("/admin/") ||
+    pathname === "/api/admin" || pathname.startsWith("/api/admin/");
   if (!needsProtect) {
     return NextResponse.next();
   }
 
   // 检查 session cookie
-  // NextAuth 默认 cookie 名：生产环境是 __Secure-next-auth.session-token 或 next-auth.session-token
   const hasSession =
     req.cookies.has("next-auth.session-token") ||
     req.cookies.has("__Secure-next-auth.session-token");
