@@ -1,28 +1,50 @@
-import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-export default withAuth(
-  // 中间件主逻辑——已通过 token 验证
-  function middleware(req) {
+// 要保护的路径（不含登录页和 auth API）
+const PROTECTED_PREFIXES = ["/admin", "/api/admin"];
+const EXCLUDED = ["/admin/login", "/admin/login/", "/api/auth", "/api/data"];
+
+export function middleware(req: NextRequest) {
+  const pathname = req.nextUrl.pathname;
+
+  // 排除的直接放行
+  if (EXCLUDED.some(p => pathname === p || pathname.startsWith(p + "/"))) {
     return NextResponse.next();
-  },
-  {
-    callbacks: {
-      // 只有有效 token 才能进入守卫范围
-      authorized: ({ token }) => !!token,
-    },
-    pages: {
-      signIn: "/admin/login",
-    },
   }
-);
+
+  // 不保护的路径放行
+  const needsProtect = PROTECTED_PREFIXES.some(
+    p => pathname === p || pathname.startsWith(p + "/")
+  );
+  if (!needsProtect) {
+    return NextResponse.next();
+  }
+
+  // 检查 session cookie
+  // NextAuth 默认 cookie 名：生产环境是 __Secure-next-auth.session-token 或 next-auth.session-token
+  const hasSession =
+    req.cookies.has("next-auth.session-token") ||
+    req.cookies.has("__Secure-next-auth.session-token");
+
+  if (hasSession) {
+    return NextResponse.next();
+  }
+
+  // API 请求返回 401
+  if (pathname.startsWith("/api/")) {
+    return new NextResponse(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // 页面请求重定向到登录
+  const loginUrl = new URL("/admin/login", req.url);
+  loginUrl.searchParams.set("callbackUrl", pathname);
+  return NextResponse.redirect(loginUrl);
+}
 
 export const config = {
-  matcher: [
-    // 保护所有 /admin/* 路径...
-    "/admin",
-    "/admin/:path*",
-    "/api/admin/:path*",
-    // ...但中间件机制会通过 pages.signIn 自动放行 /admin/login
-  ],
+  matcher: ["/admin/:path*", "/api/admin/:path*"],
 };
